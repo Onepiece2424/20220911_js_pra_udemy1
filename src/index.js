@@ -86,18 +86,39 @@
 
 // 配列のよくある間違い
 
-const arr1 = [10, 20];
+// const arr1 = [10, 20];
 
-// const arr2 = arr1;
+// // const arr2 = arr1;
+// // arr2[0] = 100;
+// // console.log(arr2);
+
+// // console.log(arr1); // arr2のみ変更したつもりが、参照元のarr1も変更されてしまっている。。。。
+
+// //　配列のよくある間違い（修正後）
+// const arr2 = [...arr1]; //(←先ほどのconst arr2 = arr1;部分をスプレッド構文に変更。)
+
 // arr2[0] = 100;
 // console.log(arr2);
 
-// console.log(arr1); // arr2のみ変更したつもりが、参照元のarr1も変更されてしまっている。。。。
+// console.log(arr1);
 
-//　配列のよくある間違い（修正後）
-const arr2 = [...arr1]; //(←先ほどのconst arr2 = arr1;部分をスプレッド構文に変更。)
+/**
+ * mapやfilterを使用した配列の処理
+ */
 
-arr2[0] = 100;
-console.log(arr2);
+// const newArr = ["田中", "佐藤", "山田"];
 
-console.log(arr1);
+//  const newArr2 = newArr.map((name) => {
+//    return name
+//  })
+//  console.log(newArr2);
+
+// newArr.map((name) => console.log(name));
+
+const numArr = [1, 2, 3, 4, 5];
+const newArr = numArr.filter((num) => {
+  return num % 2 === 1;
+  // return num % 2 === 0;
+});
+
+console.log(newArr);
