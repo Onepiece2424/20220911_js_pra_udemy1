@@ -23,7 +23,7 @@ console.log(func1("func1です。"));
 const func2 = (str) => str;
 console.log(func2("func2です。"));
 
-const func3 = (num1, num2) => {
-  return num1 + num2;
+const func3 = (num1, num2, num3) => {
+  return num1 + num2 + num3;
 };
-console.log(func3(10, 20));
+console.log(func3(10, 20, 30));
