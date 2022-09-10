@@ -106,7 +106,8 @@
  * mapやfilterを使用した配列の処理
  */
 
-// const newArr = ["田中", "佐藤", "山田"];
+// mapメソッド
+const newArr = ["田中", "佐藤", "山田"];
 
 //  const newArr2 = newArr.map((name) => {
 //    return name
@@ -114,11 +115,25 @@
 //  console.log(newArr2);
 
 // newArr.map((name) => console.log(name));
+// newArr.map((name, index) =>
+//   console.log(`${index + 1}番目は、${name}さんです。`)
+// );
 
-const numArr = [1, 2, 3, 4, 5];
-const newArr = numArr.filter((num) => {
-  return num % 2 === 1;
-  // return num % 2 === 0;
+//　filterメソッド
+// const numArr = [1, 2, 3, 4, 5];
+// const newArr = numArr.filter((num) => {
+//   return num % 2 === 1;
+//   // return num % 2 === 0;
+// });
+
+// console.log(newArr);
+
+// mapメソッドを用いた少し複雑な処理
+const nameArr = newArr.map((name) => {
+  if (name === "田中") {
+    return `${name}だよ。`;
+  } else {
+    return `${name}さんです。`;
+  }
 });
-
-console.log(newArr);
+console.log(nameArr);
