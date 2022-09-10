@@ -28,14 +28,24 @@
 // console.log(func3(10, 20, 30));
 
 // 分割代入
-const myProfile = {
-  name: "じゃけえ",
-  age: 28
-};
+// const myProfile = {
+//   name: "じゃけえ",
+//   age: 28
+// };
 
-const message3 = `名前は${myProfile.name}です。年齢は${myProfile.age}歳です。`;
-console.log(message3);
+// const message3 = `名前は${myProfile.name}です。年齢は${myProfile.age}歳です。`;
+// console.log(message3);
 
-const { name, age } = myProfile;
-const message4 = `名前は${name}です。年齢は${age}歳です。`;
-console.log(message4);
+// const { name, age } = myProfile;
+// const message4 = `名前は${name}です。年齢は${age}歳です。`;
+// console.log(message4);
+
+const myProfile = ["じゃけえ", 28];
+
+// const messgae5 = `私の名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`
+// console.log(messgae5);
+
+const [name, age] = myProfile;
+
+const messgae6 = `私の名前は${name}です。年齢は${age}歳です。`;
+console.log(messgae6);
