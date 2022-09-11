@@ -129,11 +129,43 @@ const newArr = ["田中", "佐藤", "山田"];
 // console.log(newArr);
 
 // mapメソッドを用いた少し複雑な処理
-const nameArr = newArr.map((name) => {
-  if (name === "田中") {
-    return `${name}だよ。`;
-  } else {
-    return `${name}さんです。`;
-  }
-});
-console.log(nameArr);
+// const nameArr = newArr.map((name) => {
+//   if (name === "田中") {
+//     return `${name}だよ。`;
+//   } else {
+//     return `${name}さんです。`;
+//   }
+// });
+// console.log(nameArr);
+
+/**
+ * 三項演算子
+ */
+
+// const val1 = 1 > 0 ? "trueです。" : "falseです。";
+// console.log(val1);
+
+// const num = 1300;
+
+// const formattedNum =
+//   typeof num === "number" ? num.toLocaleString() : "数値を入力してください。";
+// console.log(formattedNum);
+
+// const checkSum = (num1, num2) => {
+//   return num1 + num2 > 100 ? "100を超えています" : "許容範囲内です。";
+// };
+// console.log(checkSum(10, 100));
+
+/**
+ * ||と&&の本当の意味
+ */
+
+// ||は、左側がfalseなら右側を返す。
+const num = false;
+const fee = num || "金額を設定してください。";
+console.log(fee);
+
+// &&は、左側がtrueなら、右側を返す。
+const num2 = 100;
+const fee2 = num2 && "何か設定されました。";
+console.log(fee2);
